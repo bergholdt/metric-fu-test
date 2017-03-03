@@ -1,0 +1,14 @@
+sudo: false
+language: ruby
+
+before_install:
+  - gem install bundler
+
+script:
+  - cat $(bundle show metric_fu)/metric_fu.gemspec
+  - bundle exec metric_fu
+
+rvm:
+  - 2.3
+  - 2.2
+  - 2.1
